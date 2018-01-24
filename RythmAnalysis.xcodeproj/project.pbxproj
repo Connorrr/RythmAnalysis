@@ -17,6 +17,7 @@
 		BF3295A42004913F002ADAC6 /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF32959E2004912F002ADAC6 /* AudioKitUI.framework */; };
 		BF3295A52004913F002ADAC6 /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF32959E2004912F002ADAC6 /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF6735062016F39F00CF3CC2 /* BluegrassRiff.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF6735052016F39F00CF3CC2 /* BluegrassRiff.wav */; };
+		BFE04FAE20183D3E00A5A8BF /* AKErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE04FAD20183D3E00A5A8BF /* AKErrorHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		BF3295902004911B002ADAC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3295962004912F002ADAC6 /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "../../../AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
 		BF6735052016F39F00CF3CC2 /* BluegrassRiff.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BluegrassRiff.wav; sourceTree = SOURCE_ROOT; };
+		BFE04FAD20183D3E00A5A8BF /* AKErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKErrorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		BF3295832004911B002ADAC6 /* RythmAnalysis */ = {
 			isa = PBXGroup;
 			children = (
+				BFE04FAF20183F1000A5A8BF /* Classes */,
 				BF3295842004911B002ADAC6 /* AppDelegate.swift */,
 				BF3295862004911B002ADAC6 /* ViewController.swift */,
 				BF3295882004911B002ADAC6 /* Main.storyboard */,
@@ -128,6 +131,22 @@
 				BF32959E2004912F002ADAC6 /* AudioKitUI.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BFE04FAF20183F1000A5A8BF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BFE04FB020183F2A00A5A8BF /* Convenience */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BFE04FB020183F2A00A5A8BF /* Convenience */ = {
+			isa = PBXGroup;
+			children = (
+				BFE04FAD20183D3E00A5A8BF /* AKErrorHandler.swift */,
+			);
+			path = Convenience;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE04FAE20183D3E00A5A8BF /* AKErrorHandler.swift in Sources */,
 				BF3295872004911B002ADAC6 /* ViewController.swift in Sources */,
 				BF3295852004911B002ADAC6 /* AppDelegate.swift in Sources */,
 			);

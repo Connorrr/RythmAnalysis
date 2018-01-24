@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     var avgDuration = TimeInterval()
     var BPM = 0.0
     
+    let errorHandler = AKErrorHandler()
+    
     //MARK:  Actions
     
     @IBAction func bPMTabButtonPressed(sender: UIButton) {
@@ -153,11 +155,13 @@ class ViewController: UIViewController {
         
         micBooster = AKBooster(micMixer, gain: 0.0)
         
-        do {
-            playerFile = try AKAudioFile(readFileName: "BluegrassRiff.wav")
-        } catch let error as NSError {
-            print("There's an error in the audiofile: \(error)")
-        }
+        playerFile = errorHandler.wrap(f: { return try AKAudioFile(readFileName: "BluegrassRiff.wav") }, errorMessage: "There's an error in the audiofile")
+        
+//        do {
+//            playerFile = try AKAudioFile(readFileName: "BluegrassRiff.wav")
+//        } catch let error as NSError {
+//            print("There's an error in the audiofile: \(error)")
+//        }
         
         //  Create the recording file
         do {
