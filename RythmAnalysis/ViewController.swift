@@ -219,7 +219,6 @@ class ViewController: UIViewController {
         plot.backgroundColor = graphView.backgroundColor
         plot.shouldFill = true
         plot.shouldMirror = true
-        plot.color = UIColor.purple
         graphView.addSubview(plot)
     }
     
