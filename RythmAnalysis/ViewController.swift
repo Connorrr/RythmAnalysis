@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bPMLabel: UILabel!
     @IBOutlet weak var startStopMetroButton: UIButton!
     @IBOutlet weak var graphView: EZAudioPlot!
+    @IBOutlet weak var playStopButton: UIButton!
     
     var fileName = "tmprecording.caf"
     
@@ -98,7 +99,11 @@ class ViewController: UIViewController {
                 }
                 sender.setTitle("Record", for: .normal)
             }else{
-                player.stop()
+                
+                if player.isPlaying {
+                    player.stop()
+                    playStopButton.setTitle("Start", for: .normal)
+                }
                 
                 do {
                     try recorder.reset()
@@ -210,6 +215,7 @@ class ViewController: UIViewController {
     func AKNodeSetup(){
         
         
+        
     }
     
     //  Initialize the subplots
@@ -219,6 +225,7 @@ class ViewController: UIViewController {
         plot.backgroundColor = graphView.backgroundColor
         plot.shouldFill = true
         plot.shouldMirror = true
+        plot.clipsToBounds = true
         graphView.addSubview(plot)
     }
     
