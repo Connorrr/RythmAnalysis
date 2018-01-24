@@ -23,14 +23,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-Ar-Dup">
                                 <rect key="frame" x="-20" y="4" width="415" height="852"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5SZ-WH-9Tg" userLabel="MainStackView">
-                                        <rect key="frame" x="20" y="20" width="375" height="812"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="5SZ-WH-9Tg" userLabel="MainStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="415" height="780"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkN-ck-SDh" userLabel="HeaderView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="415" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="207-Xy-Vsm">
-                                                        <rect key="frame" x="0.0" y="76" width="375" height="24"/>
+                                                        <rect key="frame" x="0.0" y="76" width="415" height="24"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -46,10 +46,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvf-9o-56K" userLabel="StartMetronomeView">
-                                                <rect key="frame" x="0.0" y="100" width="375" height="150"/>
+                                                <rect key="frame" x="0.0" y="100" width="415" height="150"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-an-ATy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="415" height="150"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="Start">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,10 +70,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lca-Ti-nJY" userLabel="TapButtonView">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="80"/>
+                                                <rect key="frame" x="0.0" y="250" width="415" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePG-DK-dJO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="415" height="80"/>
                                                         <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="Tap">
@@ -95,13 +95,13 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kX-fX-Xbd" userLabel="RecordPlayStackView">
-                                                <rect key="frame" x="0.0" y="330" width="375" height="100"/>
+                                                <rect key="frame" x="0.0" y="330" width="415" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEb-ij-BWW" userLabel="RecordView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="207.33333333333334" height="100"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-hZ-cJB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="100"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="207.33333333333334" height="100"/>
                                                                 <color key="backgroundColor" red="0.6705882353" green="0.41176470590000003" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                                 <state key="normal" title="Record">
@@ -122,10 +122,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HuU-1k-Kko" userLabel="PlayView">
-                                                        <rect key="frame" x="187" y="0.0" width="188" height="100"/>
+                                                        <rect key="frame" x="207.33333333333337" y="0.0" width="207.66666666666663" height="100"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ox-M1-WXP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="188" height="100"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="207.66666666666666" height="100"/>
                                                                 <color key="backgroundColor" red="0.74509803919999995" green="0.56470588239999997" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                                 <state key="normal" title="Play">
@@ -151,31 +151,74 @@
                                                     <constraint firstAttribute="height" constant="100" id="x65-JY-iwG"/>
                                                 </constraints>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjM-Dj-9V6" userLabel="GraphView" customClass="EZAudioPlot">
-                                                <rect key="frame" x="0.0" y="430" width="375" height="382"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-vF-LwI" userLabel="GraphViewContainer">
+                                                <rect key="frame" x="0.0" y="430" width="415" height="150"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjM-Dj-9V6" userLabel="GraphView" customClass="EZAudioPlot">
+                                                        <rect key="frame" x="20" y="20" width="375" height="110"/>
+                                                        <color key="backgroundColor" red="0.90346980089999995" green="0.61446851489999998" blue="0.47447776790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" red="0.74509803919999995" green="0.56470588239999997" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                                <color key="value" red="0.90346980089999995" green="0.61446851489999998" blue="0.47447776790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.90346980089999995" green="0.61446851489999998" blue="0.47447776790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                        <color key="value" red="0.74509803919999995" green="0.56470588239999997" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                        <color key="value" red="0.90346980089999995" green="0.61446851489999998" blue="0.47447776790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <constraints>
+                                                    <constraint firstItem="MjM-Dj-9V6" firstAttribute="leading" secondItem="dBh-vF-LwI" secondAttribute="leading" constant="20" id="0RX-MB-3uT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MjM-Dj-9V6" secondAttribute="trailing" constant="20" id="5hx-eu-GLX"/>
+                                                    <constraint firstAttribute="height" constant="150" id="cC0-FA-TM3"/>
+                                                    <constraint firstItem="MjM-Dj-9V6" firstAttribute="top" secondItem="dBh-vF-LwI" secondAttribute="top" constant="20" id="etY-13-tXZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MjM-Dj-9V6" secondAttribute="bottom" constant="20" id="pMg-wS-KpR"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2g-uZ-Uvp" userLabel="RecordingView1">
+                                                <rect key="frame" x="0.0" y="580" width="415" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Dud-31-Dr3"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqM-ea-Db3" userLabel="RecordingView2">
+                                                <rect key="frame" x="0.0" y="630" width="415" height="50"/>
+                                                <color key="backgroundColor" red="0.74509803919999995" green="0.56470588239999997" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="loj-Zp-yHA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uf-rl-ZB1" userLabel="RecordingView3">
+                                                <rect key="frame" x="0.0" y="680" width="415" height="50"/>
+                                                <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="f4O-c9-FnX"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbs-H0-fOt" userLabel="RecordingView4">
+                                                <rect key="frame" x="0.0" y="730" width="415" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hW9-Lc-O6A"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="Vvf-9o-56K" firstAttribute="leading" secondItem="OkN-ck-SDh" secondAttribute="leading" id="Mnj-Jc-9Wz"/>
+                                            <constraint firstItem="dBh-vF-LwI" firstAttribute="top" secondItem="9kX-fX-Xbd" secondAttribute="bottom" id="X69-6c-r1a"/>
+                                            <constraint firstItem="O2g-uZ-Uvp" firstAttribute="top" secondItem="dBh-vF-LwI" secondAttribute="bottom" id="a0g-H5-TgA"/>
+                                            <constraint firstItem="lqM-ea-Db3" firstAttribute="top" secondItem="O2g-uZ-Uvp" secondAttribute="bottom" id="fDH-rn-Fbm"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="5SZ-WH-9Tg" firstAttribute="centerY" secondItem="kxC-Ar-Dup" secondAttribute="centerY" id="0HO-0N-Rbh"/>
-                                    <constraint firstItem="5SZ-WH-9Tg" firstAttribute="height" secondItem="kxC-Ar-Dup" secondAttribute="height" constant="-40" id="8ge-d1-yd0"/>
-                                    <constraint firstAttribute="trailing" secondItem="5SZ-WH-9Tg" secondAttribute="trailing" constant="20" id="Gi6-re-f37"/>
-                                    <constraint firstAttribute="bottom" secondItem="5SZ-WH-9Tg" secondAttribute="bottom" constant="20" id="NY4-2A-ahB"/>
-                                    <constraint firstItem="5SZ-WH-9Tg" firstAttribute="centerX" secondItem="kxC-Ar-Dup" secondAttribute="centerX" id="bCJ-1N-WnZ"/>
-                                    <constraint firstItem="5SZ-WH-9Tg" firstAttribute="width" secondItem="kxC-Ar-Dup" secondAttribute="width" constant="-40" id="kqg-ec-gWY"/>
+                                    <constraint firstAttribute="trailing" secondItem="5SZ-WH-9Tg" secondAttribute="trailing" id="142-Vn-anx"/>
+                                    <constraint firstAttribute="bottom" secondItem="5SZ-WH-9Tg" secondAttribute="bottom" id="Rtq-Sr-gbe"/>
+                                    <constraint firstItem="5SZ-WH-9Tg" firstAttribute="top" secondItem="kxC-Ar-Dup" secondAttribute="top" id="mg9-Jw-kaq"/>
+                                    <constraint firstItem="5SZ-WH-9Tg" firstAttribute="leading" secondItem="kxC-Ar-Dup" secondAttribute="leading" id="mlZ-SY-2eD"/>
+                                    <constraint firstItem="5SZ-WH-9Tg" firstAttribute="width" secondItem="kxC-Ar-Dup" secondAttribute="width" id="x4B-em-tfR"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
