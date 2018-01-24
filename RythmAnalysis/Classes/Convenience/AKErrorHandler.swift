@@ -11,6 +11,13 @@ import AudioKit
 
 class AKErrorHandler {
     
+    
+    /// Takes a block which throws an error and handles the error by logging the error with or without a custom message.
+    ///
+    /// - Parameters:
+    ///   - f: Block of code to be executed
+    ///   - errorMessage: custom message prefix for the error log
+    /// - Returns: Block return
     func wrap<ReturnType>(f: () throws -> ReturnType?, errorMessage: String?) -> ReturnType? {
         do {
             return try f()
@@ -20,7 +27,7 @@ class AKErrorHandler {
         }
     }
     
-    func logError(error: NSError, msg: String?) {
+    private func logError(error: NSError, msg: String?) {
         if msg != nil {
             AKLog("\(msg!):  \(error)")
         }else{

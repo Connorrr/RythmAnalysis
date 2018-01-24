@@ -18,8 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var graphView: EZAudioPlot!
     @IBOutlet weak var playStopButton: UIButton!
     
-    var fileName = "tmprecording.caf"
-    
     var metronome = AKMetronome()
     var mic : AKMicrophone!
     var micBooster = AKBooster()
@@ -94,12 +92,10 @@ class ViewController: UIViewController {
             if recorder.isRecording {
                 recorder.stop()
                 
-                do{
-                    try player.replace(file: recorder.audioFile!)
-                }catch let error as NSError {
-                    print("Error replacing the player file in ViewController: recordbuttonPressed(): \(error)")
-                }
+                //  Replace the players audio file with this new one if applicable
+                errorHandler.wrap(f: {try player.replace(file: recorder.audioFile!)}, errorMessage: "Error replacing the player file in ViewController: recordbuttonPressed()")
                 sender.setTitle("Record", for: .normal)
+                
             }else{
                 
                 if player.isPlaying {
@@ -107,17 +103,12 @@ class ViewController: UIViewController {
                     playStopButton.setTitle("Start", for: .normal)
                 }
                 
-                do {
-                    try recorder.reset()
-                } catch let error as NSError {
-                    AKLog("There was an error when attempting to reset the recorder:  \(error)")
-                }
+                //  overwrite the audio file if it exists
+                errorHandler.wrap(f: {try recorder.reset()}, errorMessage: "There was an error when attempting to reset the recorder")
                 
-                do {
-                    try recorder.record()
-                }catch let error as NSError {
-                    AKLog("Error, cannot record:  \(error)")
-                }
+                //  Start recording
+                errorHandler.wrap(f: {try recorder.record()}, errorMessage: "Error, cannot record")
+
                 if recorder.isRecording {
                     sender.setTitle("Stop Recording", for: .normal)
                 }
@@ -155,33 +146,17 @@ class ViewController: UIViewController {
         
         micBooster = AKBooster(micMixer, gain: 0.0)
         
+        //  Init the players initial AKAudioFile
         playerFile = errorHandler.wrap(f: { return try AKAudioFile(readFileName: "BluegrassRiff.wav") }, errorMessage: "There's an error in the audiofile")
         
-//        do {
-//            playerFile = try AKAudioFile(readFileName: "BluegrassRiff.wav")
-//        } catch let error as NSError {
-//            print("There's an error in the audiofile: \(error)")
-//        }
-        
         //  Create the recording file
-        do {
-            recordingFile = try AKAudioFile()
-        }catch let error as NSError {
-            AKLog("Error creating the recording file:  \(error)")
-        }
+        recordingFile = errorHandler.wrap(f: {return try AKAudioFile()}, errorMessage: "Error creating the recording file")
         
-        do {
-            recorder = try AKNodeRecorder(node: micMixer, file: recordingFile)
-
-        }catch let error as NSError {
-            print("There was an error creating the Recorder Node:  \(error)")
-        }
+        //  Init the recorder node
+        recorder = errorHandler.wrap(f: {return try AKNodeRecorder(node: micMixer, file: recordingFile)}, errorMessage: "There was an error creating the Recorder Node")
         
-        do {
-            player = try AKAudioPlayer(file: playerFile, looping: true, lazyBuffering: true, completionHandler: nil)
-        }catch let error as NSError{
-            print("Audio Player setup error:  \(error)")
-        }
+        //  Init the player node
+        player = errorHandler.wrap(f: {return try AKAudioPlayer(file: playerFile, looping: true, lazyBuffering: true, completionHandler: nil)}, errorMessage: "Audio Player setup error")
         
         metronome.subdivision = 4
         metronome.frequency1 = 4000
@@ -208,17 +183,8 @@ class ViewController: UIViewController {
     func setupAKSession(){
         AKSettings.bufferLength = .medium
         
-        do {
-            try AKSettings.setSession(category: .playAndRecord, with: .allowBluetoothA2DP)
-        } catch let error as NSError{
-            AKLog("Could not set session category:  \(error)")
-        }
-        
-    }
-    
-    func AKNodeSetup(){
-        
-        
+        // Set the AK Settion up to play and record
+        errorHandler.wrap(f: {try AKSettings.setSession(category: .playAndRecord, with: .allowBluetoothA2DP)}, errorMessage: "Could not set session category")
         
     }
     
