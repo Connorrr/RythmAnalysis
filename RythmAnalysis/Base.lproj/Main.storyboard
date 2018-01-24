@@ -190,7 +190,7 @@
                     </view>
                     <connections>
                         <outlet property="bPMLabel" destination="207-Xy-Vsm" id="CfM-ay-VHi"/>
-                        <outlet property="graphView" destination="MjM-Dj-9V6" id="zEt-iL-8Bx"/>
+                        <outlet property="graphView" destination="MjM-Dj-9V6" id="R0s-MY-nop"/>
                         <outlet property="startStopMetroButton" destination="qgD-an-ATy" id="oWp-fv-ngc"/>
                     </connections>
                 </viewController>

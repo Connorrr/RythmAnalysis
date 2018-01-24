@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var bPMLabel: UILabel!
     @IBOutlet weak var startStopMetroButton: UIButton!
-    @IBOutlet weak var graphView: UIView!
+    @IBOutlet weak var graphView: EZAudioPlot!
     
     var fileName = "tmprecording.caf"
     
