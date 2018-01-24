@@ -30,8 +30,6 @@ class ViewController: UIViewController {
     var recordingFile : AKAudioFile!
     var playerFile : AKAudioFile!
     
-    var inputPlot : AKNodeOutputPlot!
-    
     var lastTapTime : Date?
     var newTapTime : Date?
     var numberOfTaps : Int = 0
@@ -187,7 +185,7 @@ class ViewController: UIViewController {
         AudioKit.output = mixer
         
         AudioKit.start()
-        //initSubPlots()
+        initSubPlots()
         
     }
 
@@ -216,13 +214,13 @@ class ViewController: UIViewController {
     
     //  Initialize the subplots
     func initSubPlots(){
-        let plot = AKNodeOutputPlot(mixer, frame: inputPlot.bounds)
+        let plot = AKNodeOutputPlot(mic, frame: graphView.bounds)
         plot.plotType = .buffer
-        plot.backgroundColor = inputPlot.backgroundColor
+        plot.backgroundColor = graphView.backgroundColor
         plot.shouldFill = true
         plot.shouldMirror = true
         plot.color = UIColor.purple
-        inputPlot.addSubview(plot)
+        graphView.addSubview(plot)
     }
     
 }
